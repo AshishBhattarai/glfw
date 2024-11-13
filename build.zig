@@ -24,18 +24,17 @@ pub fn build(b: *std.Build) void {
     });
     lib.addIncludePath(b.path("include"));
     lib.linkLibC();
-    addPaths(&lib.root_module);
 
     if (shared) lib.defineCMacro("_GLFW_BUILD_DLL", "1");
 
-    lib.installHeadersDirectory(b.path("include"), "GLFW", .{});
+    lib.installHeadersDirectory(b.path("include/GLFW"), "GLFW", .{});
+
     // GLFW headers depend on these headers, so they must be distributed too.
-    if (b.lazyDependency("vulkan_headers", .{
+    lib.installLibraryHeaders(b.dependency("vulkan_headers", .{
         .target = target,
         .optimize = optimize,
-    })) |dep| {
-        lib.installLibraryHeaders(dep.artifact("vulkan-headers"));
-    }
+    }).artifact("vulkan-headers"));
+
     if (target.result.os.tag == .linux) {
         if (b.lazyDependency("x11_headers", .{
             .target = target,
@@ -56,6 +55,15 @@ pub fn build(b: *std.Build) void {
     if (target.result.isDarwin()) {
         // MacOS: this must be defined for macOS 13.3 and older.
         lib.defineCMacro("__kernel_ptr_semantics", "");
+
+        if (b.lazyDependency("xcode_frameworks", .{
+            .target = target,
+            .optimize = optimize,
+        })) |dep| {
+            lib.root_module.addSystemFrameworkPath(dep.path("Frameworks"));
+            lib.root_module.addSystemIncludePath(dep.path("include"));
+            lib.root_module.addLibraryPath(dep.path("lib"));
+        }
     }
 
     const include_src_flag = "-Isrc";
@@ -151,10 +159,6 @@ pub fn build(b: *std.Build) void {
         },
     }
     b.installArtifact(lib);
-}
-
-pub fn addPaths(mod: *std.Build.Module) void {
-    if (mod.resolved_target.?.result.os.tag == .macos) @import("xcode_frameworks").addPaths(mod);
 }
 
 const base_sources = [_][]const u8{

@@ -14,22 +14,22 @@
     },
     .dependencies = .{
         .xcode_frameworks = .{
-            .url = "https://pkg.machengine.org/xcode-frameworks/2fca968efa90a4060803c56dd0f027890353f0a9.tar.gz",
-            .hash = "122010c1a745ea06dee3012fbd3b311bd3d75ec39ded6bf566b36ebe3cd8da482347",
-        },
-        .vulkan_headers = .{
-            .url = "https://pkg.machengine.org/vulkan-headers/e33f2e482893a90bb36d67649ab30d5236ac21ab.tar.gz",
-            .hash = "122017098e4ca00dac1a9d30d152a6e6e9522843219c6df4489210fb7c8a6e4c7c1a",
+            .url = "https://pkg.machengine.org/xcode-frameworks/9a45f3ac977fd25dff77e58c6de1870b6808c4a7.tar.gz",
+            .hash = "122098b9174895f9708bc824b0f9e550c401892c40a900006459acf2cbf78acd99bb",
             .lazy = true,
         },
+        .vulkan_headers = .{
+            .url = "https://pkg.machengine.org/vulkan-headers/53e3ee66a78b97075863135b429956f225b149a5.tar.gz",
+            .hash = "1220e3bb588011412a21b05e2372b8261434bc174dce61139c8450e05bc8f0609735",
+        },
         .wayland_headers = .{
-            .url = "https://pkg.machengine.org/wayland-headers/4926b8c635aa2f215b0d5382060fc4091aa7b705.tar.gz",
-            .hash = "12207decf58bee217ae9c5340a6852a62e7f5af9901bef9b1468d93e480798898285",
+            .url = "https://pkg.machengine.org/wayland-headers/464f5d7e9de3bd93dd6f4b4f880b7276ecdcaf13.tar.gz",
+            .hash = "12205ac3159cfe9af679bf43545a71e45216ee110ee6d37ee4bedbb1cbc7f6caff7d",
             .lazy = true,
         },
         .x11_headers = .{
-            .url = "https://pkg.machengine.org/x11-headers/ad1c4891f70302c61ba956cfd565758dc1ca9d28.tar.gz",
-            .hash = "1220ce35d8f1556afd5bf4796a7899d459f9c628b989f247eaf6aa00fbad10a88c9f",
+            .url = "https://pkg.machengine.org/x11-headers/29aefb525d5c08b05b0351e34b1623854a138c21.tar.gz",
+            .hash = "1220e79da2d5efd5e9dd8b6453f83a9ec79534e2e203b3331766b81e49171f3db474",
             .lazy = true,
         },
     },
