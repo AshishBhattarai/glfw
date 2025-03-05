@@ -1,6 +1,7 @@
 .{
-    .name = "glfw",
+    .name = .glfw,
     .version = "0.0.0",
+    .fingerprint = 0x3bbe0a5c16153d94,
     .paths = .{
         "include/",
         "src/",
