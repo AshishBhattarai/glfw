@@ -15,23 +15,23 @@
     },
     .dependencies = .{
         .xcode_frameworks = .{
-            .url = "https://pkg.machengine.org/xcode-frameworks/9a45f3ac977fd25dff77e58c6de1870b6808c4a7.tar.gz",
-            .hash = "122098b9174895f9708bc824b0f9e550c401892c40a900006459acf2cbf78acd99bb",
+            .url = "https://github.com/AshishBhattarai/xcode-frameworks/archive/8a1cfb373587ea4c9bb1468b7c986462d8d4e10e.tar.gz",
+            .hash="N-V-__8AALShqgXkvqYU6f__FrA22SMWmi2TXCJjNTO1m8XJ",
             .lazy = true,
         },
         .vulkan_headers = .{
-            .url = "https://pkg.machengine.org/vulkan-headers/53e3ee66a78b97075863135b429956f225b149a5.tar.gz",
-            .hash = "1220e3bb588011412a21b05e2372b8261434bc174dce61139c8450e05bc8f0609735",
+            .url = "https://github.com/AshishBhattarai/vulkan-headers/archive/68ab446d1fa0707bb7082c95c51d33a731cafac2.tar.gz",
+            .hash = "N-V-__8AAAIGzwCa4tCHc1jhxfgWaL73kQkckQuQ2WA2XWI5",
             .lazy = true,
         },
         .wayland_headers = .{
-            .url = "https://pkg.machengine.org/wayland-headers/7c53e7483c3cfb5c6780ae542c9f5cfa712a826a.tar.gz",
-            .hash = "1220563c3d5603a02e61293c2c0223e01a3f298fb606bf0d108293b925434970a207",
+            .url = "https://github.com/AshishBhattarai/wayland-headers/archive/7c53e7483c3cfb5c6780ae542c9f5cfa712a826a.tar.gz",
+            .hash = "N-V-__8AAJfbCQBWPD1WA6AuYSk8LAIj4Bo_KY-2Br8NEIKT",
             .lazy = true,
         },
         .x11_headers = .{
-            .url = "https://pkg.machengine.org/x11-headers/29aefb525d5c08b05b0351e34b1623854a138c21.tar.gz",
-            .hash = "1220e79da2d5efd5e9dd8b6453f83a9ec79534e2e203b3331766b81e49171f3db474",
+            .url = "https://github.com/AshishBhattarai/x11-headers/archive/bc049ff07d31014d4d409cc328c3feb57c9b9a83.tar.gz",
+            .hash = "N-V-__8AACbnQQAIOzaeAZpe-9GIpYoldZwJoSbhhHIA_56I",
             .lazy = true,
         },
     },
